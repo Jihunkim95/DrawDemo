@@ -16,6 +16,9 @@ struct ContentView: View {
                 Spacer()
                     .frame(height: 350)
                 
+                MyShape()
+                    .fill(.yellow)
+                    .frame(width: 360, height: 350)
                 ShapeView()
                 
             }
@@ -80,7 +83,19 @@ struct PathView: View {
     }
 }
 
-
+struct MyShape: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        
+        path.move(to: CGPoint(x: rect.minX, y: rect.minY))
+        path.addQuadCurve(to: CGPoint(x: rect.minX, y: rect.maxY),
+                          control: CGPoint(x: rect.midX, y: rect.midY))
+        path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
+        path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+        path.closeSubpath()
+        return path
+    }
+}
 #Preview {
     ContentView()
 }
