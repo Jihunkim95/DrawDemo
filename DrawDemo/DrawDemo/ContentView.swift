@@ -11,7 +11,13 @@ struct ContentView: View {
     var body: some View {
         ScrollView{
             VStack{
+                PathView()
+                
+                Spacer()
+                    .frame(height: 350)
+                
                 ShapeView()
+                
             }
         }
     }
@@ -20,6 +26,9 @@ struct ContentView: View {
 struct ShapeView: View {
     var body: some View {
         VStack{
+            Text("기본모형")
+                .font(.title2)
+            
             Rectangle()
             
             Circle()
@@ -41,6 +50,7 @@ struct ShapeView: View {
                 .foregroundStyle(.blue)
                 .frame(width: 200, height: 150)
             
+            Text("테두리 오버레이")
             Ellipse()
                 .fill(.red)
                 .overlay{
@@ -52,6 +62,17 @@ struct ShapeView: View {
         }
         .padding()
 
+    }
+}
+
+struct PathView: View {
+    var body: some View{
+        Path{ path in
+            path.move(to: CGPoint(x: 10, y: 0))
+            path.addLine(to: CGPoint(x: 10, y: 350))
+            path.addLine(to: CGPoint(x: 300, y: 300))
+        }
+        .fill(.green)
     }
 }
 #Preview {
