@@ -1,0 +1,17 @@
+# Ch40. Swift 그래픽 드로잉 기초
+    - Swift 도형에 메소드를 배워보자
+    - .stroke
+        - StrokeStyle
+        - overlay도 사용가능
+    - 커스텀 경로 및 도형
+        - Path {path in .move, addLine, closeSubpath()..}
+        - Shape라는 구조체를 선언하고 그 내부에서 커스텀 가능
+    - 색상 그레디언트와 섀도
+        - .gradient
+        - .shadow
+    - 방사형, 원뿔, 선형
+        - 방사형: RadialGradient
+        - 원뿔형: AngularGradient
+        - 선형: LinearGradient
+    - 공부하기
+        - [https://developer.apple.com/tutorials/swiftui/drawing-paths-and-shapes](https://colab.research.google.com/corgiredirector?site=https%3A%2F%2Fdeveloper.apple.com%2Ftutorials%2Fswiftui%2Fdrawing-paths-and-shapes)
