@@ -23,6 +23,7 @@
 		5C93AC5A2B32706C00292CEC /* PathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93AC592B32706C00292CEC /* PathView.swift */; };
 		5C93AC5C2B32709B00292CEC /* GradientShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93AC5B2B32709B00292CEC /* GradientShadowView.swift */; };
 		5C93AC5F2B32719B00292CEC /* AniNavigationMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93AC5E2B32719B00292CEC /* AniNavigationMenuView.swift */; };
+		5C93AC612B327EF800292CEC /* AniGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93AC602B327EF800292CEC /* AniGradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		5C93AC592B32706C00292CEC /* PathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathView.swift; sourceTree = "<group>"; };
 		5C93AC5B2B32709B00292CEC /* GradientShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientShadowView.swift; sourceTree = "<group>"; };
 		5C93AC5E2B32719B00292CEC /* AniNavigationMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AniNavigationMenuView.swift; sourceTree = "<group>"; };
+		5C93AC602B327EF800292CEC /* AniGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AniGradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +117,6 @@
 			children = (
 				5C93ABAE2B311D7C00292CEC /* DrawDemoApp.swift */,
 				5C93ABB02B311D7C00292CEC /* ContentView.swift */,
-				5C93AC5E2B32719B00292CEC /* AniNavigationMenuView.swift */,
 				5C93AC562B32703100292CEC /* View */,
 				5C93AC5D2B32713F00292CEC /* PracticeView */,
 				5C93ABB22B311D7E00292CEC /* Assets.xcassets */,
@@ -156,6 +157,8 @@
 				5C93AC572B32704B00292CEC /* ShapeView.swift */,
 				5C93AC592B32706C00292CEC /* PathView.swift */,
 				5C93AC5B2B32709B00292CEC /* GradientShadowView.swift */,
+				5C93AC602B327EF800292CEC /* AniGradientView.swift */,
+				5C93AC5E2B32719B00292CEC /* AniNavigationMenuView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C93ABB12B311D7C00292CEC /* ContentView.swift in Sources */,
+				5C93AC612B327EF800292CEC /* AniGradientView.swift in Sources */,
 				5C93ABDE2B31626A00292CEC /* DrawView03.swift in Sources */,
 				5C93AC5C2B32709B00292CEC /* GradientShadowView.swift in Sources */,
 				5C93ABE22B31640200292CEC /* DrawView05.swift in Sources */,

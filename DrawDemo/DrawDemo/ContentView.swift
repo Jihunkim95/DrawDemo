@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ScrollView{
             VStack{
                 
 //                GradientShadowView()
@@ -25,8 +24,10 @@ struct ContentView: View {
 //                
 //                ShapeView()
                 AniNavigationMenuView()
+                
+                AniGradientView()
             }
-        }
+
     }
 }
 
