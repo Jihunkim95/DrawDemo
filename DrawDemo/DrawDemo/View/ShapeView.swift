@@ -18,6 +18,7 @@ struct ShapeView: View {
             Circle()
                 .fill(.red)
                 .frame(width: 200,height: 100)
+            
             Capsule()
                 .stroke(lineWidth:10)
                 .foregroundStyle(.blue)
