@@ -12,11 +12,12 @@ struct AniGradientView: View {
     @State var animateGradient = false
 
     var body: some View {
-        //선형
-        LinearGradientView(animateGradient: $animateGradient)
-        
-        //원뿔
-        RadialGradientView(animateGradient: $animateGradient)
+//        //선형
+//        LinearGradientView(animateGradient: $animateGradient)
+//        
+//        //원뿔
+//        RadialGradientView(animateGradient: $animateGradient)
+        HueRotationGradientView(animateGradient: $animateGradient)
     }
 }
 
@@ -60,6 +61,29 @@ struct RadialGradientView: View {
                                startRadius: animateGradient ? 400 : 200,
                                endRadius:   animateGradient ? 20 : 40)
             .ignoresSafeArea()
+            .onAppear{
+                withAnimation(.linear(duration: 3).repeatForever(autoreverses: true)) {
+                    animateGradient.toggle()
+                }
+            }
+    }
+}
+
+
+struct HueRotationGradientView: View {
+
+    @Binding var animateGradient:Bool
+    
+    var body: some View {
+
+        LinearGradient(colors:  [Color(red: 195 / 255.0, green: 237 / 255.0, blue: 232 / 255.0),
+                                 Color(red: 236 / 255.0, green: 246 / 255.0, blue: 238 / 255.0),
+                                 Color(red: 239 / 255.0, green: 207 / 255.0, blue: 246 / 255.0)],
+                       startPoint: animateGradient ? .topLeading : .bottomLeading,
+                       endPoint: animateGradient ? .bottomTrailing : .topTrailing)
+            .ignoresSafeArea()
+            //hueRotation를 사용해서 각도 지정가능
+            .hueRotation(.degrees(animateGradient ? 90 : 0))
             .onAppear{
                 withAnimation(.linear(duration: 3).repeatForever(autoreverses: true)) {
                     animateGradient.toggle()
