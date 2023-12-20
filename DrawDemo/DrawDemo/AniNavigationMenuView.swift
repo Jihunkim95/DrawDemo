@@ -11,33 +11,30 @@ struct AniNavigationMenuView: View {
 
     let menuItems = ["Travel", "Nature", "Architecture"]
 
+    @State var selectIndex = 0
+    
     var body: some View {
         HStack {
-            Spacer()
+            ForEach(menuItems.indices, id: \.self){ index in
+                
+                if index == selectIndex{
+                    Text(menuItems[index])
+                        .padding(.horizontal)
+                        .padding(.vertical, 4)
+                        .background(Capsule().foregroundStyle(.purple))
+                        .foregroundStyle(.white)
+                }else{
+                    Text(menuItems[index])
+                        .padding(.horizontal)
+                        .padding(.vertical, 4)
+                        .background(Capsule().foregroundStyle(Color(uiColor: UIColor.systemGray5)))
+                        .foregroundStyle(.black)
+                        .onTapGesture {
+                            selectIndex = index
+                        }
+                }
+            }
 
-            Text(menuItems[0])
-                .padding(.horizontal)
-                .padding(.vertical, 4)
-                .background(Capsule().foregroundStyle(.purple))
-                .foregroundStyle(.white)
-
-            Spacer()
-
-            Text(menuItems[1])
-                .padding(.horizontal)
-                .padding(.vertical, 4)
-                .background(Capsule().foregroundStyle(Color(uiColor: UIColor.systemGray5)))
-                .foregroundStyle(.black)
-
-            Spacer()
-
-            Text(menuItems[2])
-                .padding(.horizontal)
-                .padding(.vertical, 4)
-                .background(Capsule().foregroundStyle(Color(uiColor: UIColor.systemGray5)))
-                .foregroundStyle(.black)
-
-            Spacer()
         }
     }
 }
