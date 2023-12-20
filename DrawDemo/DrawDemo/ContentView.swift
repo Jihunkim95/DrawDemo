@@ -24,7 +24,7 @@ struct ContentView: View {
 //                    .frame(width: 360, height: 350)
 //                
 //                ShapeView()
-                
+                AniNavigationMenuView()
             }
         }
     }
